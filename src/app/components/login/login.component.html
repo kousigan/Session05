@@ -1,0 +1,23 @@
+<div class="login-page">
+
+  <div class="form">
+      <header><h2><small><i class="fa fa-paper-plane"></i></small>paper planes</h2>   </header>
+
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form" (submit)="login(username.value,password.value)">
+      <input type="text" placeholder="username" #username/>
+      <input type="password" placeholder="password" #password/>
+      <button (click)="login(username.value,password.value)">login</button>
+      <p class="message">  <a (click)="login('Guest','guest')"  >Continue as Guest</a></p>
+      <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
+       <div class="error_status" *ngIf="error">Please check your login details!</div>
+    </form>
+  </div>
+ 
+</div>
