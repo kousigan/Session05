@@ -2,7 +2,9 @@ header{
     background:#2B3A42;
     color: #BDD4DE
 }
-
+h1{
+    margin-top: 20px;
+}
 h2{
     padding: 10px
 }

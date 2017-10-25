@@ -11,10 +11,12 @@ import { LoginComponent } from './components/login/login.component';
 import { UserService } from './services/user.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+     
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { UserService } from './services/user.service';
     FormsModule,
     RouteConfig,
     PagesModule,
+  
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

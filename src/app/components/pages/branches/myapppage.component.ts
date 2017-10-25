@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     <button (click)="onlyodd = !onlyodd" > {{onlyodd ? "even":"odd" }} </button>
     <div *ngIf = " onlyodd " >
         <ul>
-            <li *ngFor="let od of oddnum"  [ngClass]="{odd: od % 3 !== 0 }">
+            <li *ngFor="let od of oddnum"  [ngClass]="{odd: od % 3 === 0 }">
                 {{od}}
             </li>
         </ul>
@@ -29,7 +29,8 @@ import { Component, OnInit } from '@angular/core';
         <button (click)="bgColor='blue'">color 2</button>
         <button (click)="bgColor='green'">color 3</button>
         <section [mybox]="bgColor" defaultColor="violet" >Applying new Color </section>
-        <section [mybox]="'purple'"> Fixed Color </section>
+        <section [mybox]="'purple'" highlightColor="red"> Fixed Color </section>
+
     </div>
     `,
     styles: [`
@@ -41,7 +42,7 @@ export class MyapppageComponent  implements OnInit {
     bgColor  = '#999';
     onlyodd;
     color = 'blue';
-    oddnum: number[] = [ 1, 3, 5];
+    oddnum: number[] = [ 1, 3, 5, 7, 9, 11];
     evennum: number[] = [ 2, 4, 6];
     ngOnInit() {
 

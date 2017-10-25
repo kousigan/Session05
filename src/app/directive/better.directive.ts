@@ -1,8 +1,7 @@
-
 import { Directive, ElementRef, Input, HostListener } from '@angular/core';
 
 @Directive({
-    selector: '[mybox]'
+    selector: '[mybox]',
 })
 
 export class BetterDirective  {
@@ -11,6 +10,7 @@ export class BetterDirective  {
 
     @Input() defaultColor: string;
 
+    // tslint:disable-next-line:no-input-rename
     @Input('mybox') highlightColor: string;
 
     @HostListener('mouseenter') onMouseEnter() {
